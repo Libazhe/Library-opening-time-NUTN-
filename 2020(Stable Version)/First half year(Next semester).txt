@@ -1,0 +1,357 @@
+<div class="chengfu col-sm-6">
+<div class="view_title">府城總館</div>
+<div class="view_message"><span>閱覽時間</span> <script>                                           //dt_1(府城校區開放時間)
+var dt_1 = new Date();                                                                           //第四行
+if((dt_1.getMonth()==0&&dt_1.getDate()==1)||(dt_1.getMonth()==1&&dt_1.getDate()==28)||(dt_1.getMonth()==2&&dt_1.getDate()==1)||(dt_1.getMonth()==3&&dt_1.getDate()==2)||(dt_1.getMonth()==3&&dt_1.getDate()==3)||(dt_1.getMonth()==3&&dt_1.getDate()==4)||(dt_1.getMonth()==3&&dt_1.getDate()==5)||(dt_1.getMonth()==3&&dt_1.getDate()==6)||(dt_1.getMonth()==3&&dt_1.getDate()==7)||(dt_1.getMonth()==5&&dt_1.getDate()==7)||(dt_1.getMonth()==5&&dt_1.getDate()==22)||(dt_1.getMonth()==5&&dt_1.getDate()==23)||(dt_1.getMonth()==5&&dt_1.getDate()==29)||(dt_1.getMonth()==7&&dt_1.getDate()==28)||(dt_1.getMonth()==7&&dt_1.getDate()==29)||(dt_1.getMonth()==7&&dt_1.getDate()==30)||(dt_1.getMonth()==8&&dt_1.getDate()==7)||(dt_1.getMonth()==8&&dt_1.getDate()==13)||(dt_1.getMonth()==9&&dt_1.getDate()==10)||(dt_1.getMonth()==9&&dt_1.getDate()==11))
+{document.write(".....閉館中.....");}                                                             //特殊閉館時間判定(只要需要特殊閉館就修改這行)(1/1,2/28,3/1,4/2~4/7,6/7,6/22,6/23,6/29,8/28,8/29,8/30,9/7,9/13,10/10,10/11)
+else if((dt_1.getMonth()==0&&dt_1.getDate()==4)||(dt_1.getMonth()==0&&dt_1.getDate()==5)||(dt_1.getMonth()==3&&dt_1.getDate()==13)||(dt_1.getMonth()==3&&dt_1.getDate()==14)||(dt_1.getMonth()==5&&dt_1.getDate()==15)||(dt_1.getMonth()==5&&dt_1.getDate()==16)||(dt_1.getMonth()==10&&dt_1.getDate()==2)||(dt_1.getMonth()==10&&dt_1.getDate()==3)){
+	if(dt_1.getHours()<8||dt_1.getHours()>=22)                                               //期中、末考前周末調整開館(僅府城)(1/4,1/5,4/13,4/14,6/15,6/16,11/2,11/3)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~22:00");}
+}
+else if((dt_1.getMonth()==9&&dt_1.getDate()==5)||(dt_1.getMonth()==11&&dt_1.getDate()==14)||(dt_1.getMonth()==11&&dt_1.getDate()==15)){      //調整上班課(調整開館)(10/5,12/14,12/15)
+	if(dt_1.getHours()<8||(dt_1.getHours()==17&&dt_1.getMinutes()>=30)||dt_1.getHours()>17)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~17:30");}
+}
+else if((dt_1.getMonth()==0&&dt_1.getDate()==13)||(dt_1.getMonth()==0&&dt_1.getDate()==14)||(dt_1.getMonth()==0&&dt_1.getDate()==15)||(dt_1.getMonth()==0&&dt_1.getDate()==16)||(dt_1.getMonth()==0&&dt_1.getDate()==17)||(dt_1.getMonth()==0&&dt_1.getDate()==20)||(dt_1.getMonth()==0&&dt_1.getDate()==21)||(dt_1.getMonth()==0&&dt_1.getDate()==22)||(dt_1.getMonth()==0&&dt_1.getDate()==30)||(dt_1.getMonth()==0&&dt_1.getDate()==31)||(dt_1.getMonth()==1&&dt_1.getDate()==3)||(dt_1.getMonth()==1&&dt_1.getDate()==4)||(dt_1.getMonth()==1&&dt_1.getDate()==5)||(dt_1.getMonth()==1&&dt_1.getDate()==6)||(dt_1.getMonth()==1&&dt_1.getDate()==7)||(dt_1.getMonth()==1&&dt_1.getDate()==10)||(dt_1.getMonth()==1&&dt_1.getDate()==11)||(dt_1.getMonth()==1&&dt_1.getDate()==17)||(dt_1.getMonth()==1&&dt_1.getDate()==18)||(dt_1.getMonth()==1&&dt_1.getDate()==19)||(dt_1.getMonth()==1&&dt_1.getDate()==20)||(dt_1.getMonth()==1&&dt_1.getDate()==21)||(dt_1.getMonth()==1&&dt_1.getDate()==24)||(dt_1.getMonth()==1&&dt_1.getDate()==25)||(dt_1.getMonth()==1&&dt_1.getDate()==26)||(dt_1.getMonth()==1&&dt_1.getDate()==27)){     //寒假調整開館(只開周一到周五)(1/13~1/17,1/20~1/22,1/30,1/31,2/3~2/7,2/10~2/11,2/17~21,2/24~27)
+       if(dt_1.getHours()<8||(dt_1.getHours()==17&&dt_1.getMinutes()>=30)||dt_1.getHours()>17)
+    		document.write(".....閉館中.....");                                               
+    	else{    
+			document.write("8:00~17:30");}
+}
+else if((dt_1.getMonth()==0&&dt_1.getDate()==11)||(dt_1.getMonth()==0&&dt_1.getDate()==12)||(dt_1.getMonth()==0&&dt_1.getDate()==18)||(dt_1.getMonth()==0&&dt_1.getDate()==19)||(dt_1.getMonth()==1&&dt_1.getDate()==1)||(dt_1.getMonth()==1&&dt_1.getDate()==2)||(dt_1.getMonth()==1&&dt_1.getDate()==8)||(dt_1.getMonth()==1&&dt_1.getDate()==9)||(dt_1.getMonth()==1&&dt_1.getDate()==12)||(dt_1.getMonth()==1&&dt_1.getDate()==13)||(dt_1.getMonth()==1&&dt_1.getDate()==14)||(dt_1.getMonth()==1&&dt_1.getDate()==15)||(dt_1.getMonth()==1&&dt_1.getDate()==16)||(dt_1.getMonth()==1&&dt_1.getDate()==22)||(dt_1.getMonth()==1&&dt_1.getDate()==23)||(dt_1.getMonth()==1&&dt_1.getDate()==28)||(dt_1.getMonth()==1&&dt_1.getDate()==29)){
+document.write(".....閉館中.....");
+}                                                                                                //寒假調整閉館(週六日1/11,1/12,1/18,1/19,2/1,2/2,2/8,2/9,2/12~16,2/22~23,2/28~29)
+else if((dt_1.getMonth()==5&&dt_1.getDate()==24)||(dt_1.getMonth()==5&&dt_1.getDate()==25)||(dt_1.getMonth()==5&&dt_1.getDate()==26)||(dt_1.getMonth()==5&&dt_1.getDate()==27)||(dt_1.getMonth()==5&&dt_1.getDate()==28)||(dt_1.getMonth()==6&&dt_1.getDate()==1)||(dt_1.getMonth()==6&&dt_1.getDate()==2)||(dt_1.getMonth()==6&&dt_1.getDate()==3)||(dt_1.getMonth()==6&&dt_1.getDate()==4)||(dt_1.getMonth()==6&&dt_1.getDate()==5)||(dt_1.getMonth()==6&&dt_1.getDate()==8)||(dt_1.getMonth()==6&&dt_1.getDate()==9)||(dt_1.getMonth()==6&&dt_1.getDate()==10)||(dt_1.getMonth()==6&&dt_1.getDate()==11)||(dt_1.getMonth()==6&&dt_1.getDate()==12)||(dt_1.getMonth()==6&&dt_1.getDate()==15)||(dt_1.getMonth()==6&&dt_1.getDate()==16)||(dt_1.getMonth()==6&&dt_1.getDate()==17)||(dt_1.getMonth()==6&&dt_1.getDate()==18)||(dt_1.getMonth()==6&&dt_1.getDate()==19)||(dt_1.getMonth()==6&&dt_1.getDate()==22)||(dt_1.getMonth()==6&&dt_1.getDate()==23)||(dt_1.getMonth()==6&&dt_1.getDate()==24)||(dt_1.getMonth()==6&&dt_1.getDate()==25)||(dt_1.getMonth()==6&&dt_1.getDate()==26)||(dt_1.getMonth()==6&&dt_1.getDate()==29)||(dt_1.getMonth()==6&&dt_1.getDate()==30)||(dt_1.getMonth()==6&&dt_1.getDate()==31)||(dt_1.getMonth()==7&&dt_1.getDate()==1)||(dt_1.getMonth()==7&&dt_1.getDate()==2)||(dt_1.getMonth()==7&&dt_1.getDate()==5)||(dt_1.getMonth()==7&&dt_1.getDate()==6)||(dt_1.getMonth()==7&&dt_1.getDate()==7)||(dt_1.getMonth()==7&&dt_1.getDate()==8)||(dt_1.getMonth()==7&&dt_1.getDate()==9)||(dt_1.getMonth()==7&&dt_1.getDate()==12)||(dt_1.getMonth()==7&&dt_1.getDate()==13)||(dt_1.getMonth()==7&&dt_1.getDate()==14)||(dt_1.getMonth()==7&&dt_1.getDate()==15)||(dt_1.getMonth()==7&&dt_1.getDate()==16)||(dt_1.getMonth()==7&&dt_1.getDate()==19)||(dt_1.getMonth()==7&&dt_1.getDate()==20)||(dt_1.getMonth()==7&&dt_1.getDate()==21)||(dt_1.getMonth()==7&&dt_1.getDate()==22)||(dt_1.getMonth()==7&&dt_1.getDate()==23)||(dt_1.getMonth()==7&&dt_1.getDate()==26)||(dt_1.getMonth()==7&&dt_1.getDate()==27)||(dt_1.getMonth()==8&&dt_1.getDate()==2)||(dt_1.getMonth()==8&&dt_1.getDate()==3)||(dt_1.getMonth()==8&&dt_1.getDate()==4)||(dt_1.getMonth()==8&&dt_1.getDate()==5)||(dt_1.getMonth()==8&&dt_1.getDate()==6)){
+       if(dt_1.getHours()<8||(dt_1.getHours()==17&&dt_1.getMinutes()>=30)||dt_1.getHours()>17)   //暑假調整開館(周一到周五)(6/24~6/28)&(7/1~7/5)&(7/8~7/12)&(7/15~19)&(7/22~7/26)&(7/29~8/2)&(8/5~8/9)&(8/12~8/16)&(8/19~8/23)&(8/26~8/30)&(9/2~9/6)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~17:30");}
+}
+else if((dt_1.getMonth()==6&&dt_1.getDate()==6)||(dt_1.getMonth()==6&&dt_1.getDate()==13)||(dt_1.getMonth()==6&&dt_1.getDate()==20)||(dt_1.getMonth()==6&&dt_1.getDate()==27)||(dt_1.getMonth()==7&&dt_1.getDate()==3)||(dt_1.getMonth()==7&&dt_1.getDate()==10)||(dt_1.getMonth()==7&&dt_1.getDate()==17)||(dt_1.getMonth()==7&&dt_1.getDate()==24)||(dt_1.getMonth()==7&&dt_1.getDate()==31)){
+       if(dt_1.getHours()<9||dt_1.getHours()>17)                                                 //暑假調整開館(周六)(7/6)&(7/13)&(7/20)&(7/27)&(8/3)&(8/10)&(8/17)&(8/24)&(8/31)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("9:00~17:00");}
+}
+else if((dt_1.getMonth()==5&&dt_1.getDate()==30)||(dt_1.getMonth()==6&&dt_1.getDate()==7)||(dt_1.getMonth()==6&&dt_1.getDate()==14)||(dt_1.getMonth()==6&&dt_1.getDate()==21)||(dt_1.getMonth()==6&&dt_1.getDate()==28)||(dt_1.getMonth()==7&&dt_1.getDate()==4)||(dt_1.getMonth()==7&&dt_1.getDate()==11)||(dt_1.getMonth()==7&&dt_1.getDate()==18)||(dt_1.getMonth()==7&&dt_1.getDate()==25)||(dt_1.getMonth()==8&&dt_1.getDate()==1)){
+    		document.write(".....閉館中.....");                                               //暑假調整閉館(周日)(6/30)&(7/7)&(7/14)&(7/21)&(7/28)&(8/4)&(8/11)&(8/18)&(8/25)&(9/1)
+}
+else if((dt_1.getMonth()==0&&dt_1.getDate()==23)||(dt_1.getMonth()==0&&dt_1.getDate()==24)||(dt_1.getMonth()==0&&dt_1.getDate()==25)||(dt_1.getMonth()==0&&dt_1.getDate()==26)||(dt_1.getMonth()==0&&dt_1.getDate()==27)||(dt_1.getMonth()==0&&dt_1.getDate()==28)||(dt_1.getMonth()==0&&dt_1.getDate()==29)){  
+        document.write(".....閉館中.....");                                                       //春節連假閉館(1/23~1/29)
+}
+else if((dt_1.getMonth()==1&&dt_1.getDate()==16)||(dt_1.getMonth()==8&&dt_1.getDate()==8)){      //(2/16)&(9/8)調整開館(僅府城)
+        if(dt_1.getHours()<14||dt_1.getHours()>=22){
+    		document.write(".....閉館中.....");}
+        else{
+			document.write("14:00~22:00");}
+}
+else{
+switch(dt_1.getDay())                                                                            //府城校區開放時間
+{
+    case 1:            //星期一
+    	if(dt_1.getHours()<8||dt_1.getHours()>=22)             //程式碼說明~第四行的 var dt_1 = new Date()為我們自訂的變數(為了抓取時間而設)，與下面的dt_2、dt_3、dt_4,分別代表府城閱覽、開放時間以及榮譽閱覽、開放時間 
+    		document.write(".....閉館中.....");             //如果有特殊日期當天----全日閉館----，只需修改(特殊閉館時間判定)，注意!!!!  dt_1到dt_4都須修改
+    	else{                                                  //getMonth()及getDate()函式說明~getMonth()的index是從0開始，getDate()的index是從1開始，所以如果是1月12日則是dt_1.getMonth()==0&&dt_1.getDate()==12
+			document.write("8:00~22:00");}         //如果有需調整開館，假如時間在8:00~22:00就加在(期中、末考前周末調整開館)中，如果時間在8:00~17:30就加在(調整上班課(調整開館))中
+			break;                                 //根據所需開館時間可以用else if 自行增加開閉館的時間判定
+	case 2:            //星期二
+    	if(dt_1.getHours()<8||dt_1.getHours()>=22)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~22:00");}
+			break;
+	case 3:            //星期三
+    	if(dt_1.getHours()<8||dt_1.getHours()>=22)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~22:00");}
+			break;
+	case 4:            //星期四
+    	if(dt_1.getHours()<8||dt_1.getHours()>=22)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~22:00");}
+			break;
+	case 5:            //星期五
+    	if(dt_1.getHours()<8||dt_1.getHours()>=22)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~22:00");}
+			break;
+        case 6:            //星期六
+	if(dt_1.getHours()<9||dt_1.getHours()>=17){
+    		document.write(".....閉館中.....");}
+        else{
+       	    document.write("9:00~17:00");}
+		    break;
+	case 0:            //星期日
+    	if(dt_1.getHours()<14||dt_1.getHours()>=22){
+    		document.write(".....閉館中.....");}
+        else{
+			document.write("14:00~22:00");}
+			break;      
+}
+}
+</script><span>借書時間</span> <script>                                                            //dt_2(府城校區借書時間)
+var dt_2 = new Date();
+if((dt_2.getMonth()==0&&dt_2.getDate()==1)||(dt_2.getMonth()==1&&dt_2.getDate()==28)||(dt_2.getMonth()==2&&dt_2.getDate()==1)||(dt_2.getMonth()==3&&dt_2.getDate()==2)||(dt_2.getMonth()==3&&dt_2.getDate()==3)||(dt_2.getMonth()==3&&dt_2.getDate()==4)||(dt_2.getMonth()==3&&dt_2.getDate()==5)||(dt_2.getMonth()==3&&dt_2.getDate()==6)||(dt_2.getMonth()==3&&dt_2.getDate()==7)||(dt_2.getMonth()==5&&dt_2.getDate()==7)||(dt_2.getMonth()==5&&dt_2.getDate()==22)||(dt_2.getMonth()==5&&dt_2.getDate()==23)||(dt_2.getMonth()==5&&dt_2.getDate()==29)||(dt_2.getMonth()==7&&dt_2.getDate()==28)||(dt_2.getMonth()==7&&dt_2.getDate()==29)||(dt_2.getMonth()==7&&dt_2.getDate()==30)||(dt_2.getMonth()==8&&dt_2.getDate()==7)||(dt_2.getMonth()==8&&dt_2.getDate()==13)||(dt_2.getMonth()==9&&dt_2.getDate()==10)||(dt_2.getMonth()==9&&dt_2.getDate()==11))
+{document.write(".....閉館中.....");}                                                             //特殊閉館時間判定(只要需要特殊閉館就修改這行)(1/1,2/28,3/1,4/2~4/7,6/7,6/22,6/23,6/29,8/28,8/29,8/30,9/7,9/13,10/10,10/11)
+else if((dt_2.getMonth()==0&&dt_2.getDate()==4)||(dt_2.getMonth()==0&&dt_2.getDate()==5)||(dt_2.getMonth()==3&&dt_2.getDate()==13)||(dt_2.getMonth()==3&&dt_2.getDate()==14)||(dt_2.getMonth()==5&&dt_2.getDate()==15)||(dt_2.getMonth()==5&&dt_2.getDate()==16)||(dt_2.getMonth()==10&&dt_2.getDate()==2)||(dt_2.getMonth()==10&&dt_2.getDate()==3)){
+	if(dt_2.getHours()<8||(dt_2.getHours()==21&&dt_2.getMinutes()>=30)||dt_2.getHours()>21)                                              //期中、末考前周末調整開館(僅府城)(1/4,1/5,4/13,4/14,6/15,6/16,11/2,11/3)
+    		document.write(".....停止借閱.....");
+    	else{    
+			document.write("8:00~21:30");}
+}
+else if((dt_2.getMonth()==9&&dt_2.getDate()==5)||(dt_2.getMonth()==11&&dt_2.getDate()==14)||(dt_2.getMonth()==11&&dt_2.getDate()==15)){     //調整上班課(調整開館)(10/5,12/14,12/15)
+	if(dt_2.getHours()<8||dt_2.getHours()>=17){
+    		document.write(".....停止借閱.....");}
+        else{
+			document.write("8:00~17:00");}   
+}
+else if((dt_2.getMonth()==0&&dt_2.getDate()==13)||(dt_2.getMonth()==0&&dt_2.getDate()==14)||(dt_2.getMonth()==0&&dt_2.getDate()==15)||(dt_2.getMonth()==0&&dt_2.getDate()==16)||(dt_2.getMonth()==0&&dt_2.getDate()==17)||(dt_2.getMonth()==0&&dt_2.getDate()==20)||(dt_2.getMonth()==0&&dt_2.getDate()==21)||(dt_2.getMonth()==0&&dt_2.getDate()==22)||(dt_2.getMonth()==0&&dt_2.getDate()==30)||(dt_2.getMonth()==0&&dt_2.getDate()==31)||(dt_2.getMonth()==1&&dt_2.getDate()==3)||(dt_2.getMonth()==1&&dt_2.getDate()==4)||(dt_2.getMonth()==1&&dt_2.getDate()==5)||(dt_2.getMonth()==1&&dt_2.getDate()==6)||(dt_2.getMonth()==1&&dt_2.getDate()==7)||(dt_2.getMonth()==1&&dt_2.getDate()==10)||(dt_2.getMonth()==1&&dt_2.getDate()==11)||(dt_2.getMonth()==1&&dt_2.getDate()==17)||(dt_2.getMonth()==1&&dt_2.getDate()==18)||(dt_2.getMonth()==1&&dt_2.getDate()==19)||(dt_2.getMonth()==1&&dt_2.getDate()==20)||(dt_2.getMonth()==1&&dt_2.getDate()==21)||(dt_2.getMonth()==1&&dt_2.getDate()==24)||(dt_2.getMonth()==1&&dt_2.getDate()==25)||(dt_2.getMonth()==1&&dt_2.getDate()==26)||(dt_2.getMonth()==1&&dt_2.getDate()==27)){     //寒假調整開館(只開周一到周五)(1/13~1/17,1/20~1/22,1/30,1/31,2/3~2/7,2/10~2/11,2/17~21,2/24~27)
+        if(dt_2.getHours()<8||dt_2.getHours()>=17)
+    		        document.write(".....停止借閱.....");                                               
+        else{
+			document.write("8:00~17:00");}   
+}
+else if((dt_2.getMonth()==0&&dt_2.getDate()==11)||(dt_2.getMonth()==0&&dt_2.getDate()==12)||(dt_2.getMonth()==0&&dt_2.getDate()==18)||(dt_2.getMonth()==0&&dt_2.getDate()==19)||(dt_2.getMonth()==1&&dt_2.getDate()==1)||(dt_2.getMonth()==1&&dt_2.getDate()==2)||(dt_2.getMonth()==1&&dt_2.getDate()==8)||(dt_2.getMonth()==1&&dt_2.getDate()==9)||(dt_2.getMonth()==1&&dt_2.getDate()==12)||(dt_2.getMonth()==1&&dt_2.getDate()==13)||(dt_2.getMonth()==1&&dt_2.getDate()==14)||(dt_2.getMonth()==1&&dt_2.getDate()==15)||(dt_2.getMonth()==1&&dt_2.getDate()==16)||(dt_2.getMonth()==1&&dt_2.getDate()==22)||(dt_2.getMonth()==1&&dt_2.getDate()==23)||(dt_2.getMonth()==1&&dt_2.getDate()==28)||(dt_2.getMonth()==1&&dt_2.getDate()==29)){
+document.write(".....閉館中.....");
+}                                                                                                //寒假調整閉館(週六日1/11,1/12,1/18,1/19,2/1,2/2,2/8,2/9)
+else if((dt_2.getMonth()==5&&dt_2.getDate()==24)||(dt_2.getMonth()==5&&dt_2.getDate()==25)||(dt_2.getMonth()==5&&dt_2.getDate()==26)||(dt_2.getMonth()==5&&dt_2.getDate()==27)||(dt_2.getMonth()==5&&dt_2.getDate()==28)||(dt_2.getMonth()==6&&dt_2.getDate()==1)||(dt_2.getMonth()==6&&dt_2.getDate()==2)||(dt_2.getMonth()==6&&dt_2.getDate()==3)||(dt_2.getMonth()==6&&dt_2.getDate()==4)||(dt_2.getMonth()==6&&dt_2.getDate()==5)||(dt_2.getMonth()==6&&dt_2.getDate()==8)||(dt_2.getMonth()==6&&dt_2.getDate()==9)||(dt_2.getMonth()==6&&dt_2.getDate()==10)||(dt_2.getMonth()==6&&dt_2.getDate()==11)||(dt_2.getMonth()==6&&dt_2.getDate()==12)||(dt_2.getMonth()==6&&dt_2.getDate()==15)||(dt_2.getMonth()==6&&dt_2.getDate()==16)||(dt_2.getMonth()==6&&dt_2.getDate()==17)||(dt_2.getMonth()==6&&dt_2.getDate()==18)||(dt_2.getMonth()==6&&dt_2.getDate()==19)||(dt_2.getMonth()==6&&dt_2.getDate()==22)||(dt_2.getMonth()==6&&dt_2.getDate()==23)||(dt_2.getMonth()==6&&dt_2.getDate()==24)||(dt_2.getMonth()==6&&dt_2.getDate()==25)||(dt_2.getMonth()==6&&dt_2.getDate()==26)||(dt_2.getMonth()==6&&dt_2.getDate()==29)||(dt_2.getMonth()==6&&dt_2.getDate()==30)||(dt_2.getMonth()==6&&dt_2.getDate()==31)||(dt_2.getMonth()==7&&dt_2.getDate()==1)||(dt_2.getMonth()==7&&dt_2.getDate()==2)||(dt_2.getMonth()==7&&dt_2.getDate()==5)||(dt_2.getMonth()==7&&dt_2.getDate()==6)||(dt_2.getMonth()==7&&dt_2.getDate()==7)||(dt_2.getMonth()==7&&dt_2.getDate()==8)||(dt_2.getMonth()==7&&dt_2.getDate()==9)||(dt_2.getMonth()==7&&dt_2.getDate()==12)||(dt_2.getMonth()==7&&dt_2.getDate()==13)||(dt_2.getMonth()==7&&dt_2.getDate()==14)||(dt_2.getMonth()==7&&dt_2.getDate()==15)||(dt_2.getMonth()==7&&dt_2.getDate()==16)||(dt_2.getMonth()==7&&dt_2.getDate()==19)||(dt_2.getMonth()==7&&dt_2.getDate()==20)||(dt_2.getMonth()==7&&dt_2.getDate()==21)||(dt_2.getMonth()==7&&dt_2.getDate()==22)||(dt_2.getMonth()==7&&dt_2.getDate()==23)||(dt_2.getMonth()==7&&dt_2.getDate()==26)||(dt_2.getMonth()==7&&dt_2.getDate()==27)||(dt_2.getMonth()==8&&dt_2.getDate()==2)||(dt_2.getMonth()==8&&dt_2.getDate()==3)||(dt_2.getMonth()==8&&dt_2.getDate()==4)||(dt_2.getMonth()==8&&dt_2.getDate()==5)||(dt_2.getMonth()==8&&dt_2.getDate()==6)){
+        if(dt_2.getHours()<8||dt_2.getHours()>=17){
+    		document.write(".....停止借閱.....");}                                            //暑假調整開館(周一到周五)(6/24~6/28)&(7/1~7/5)&(7/8~7/12)&(7/15~19)&(7/22~7/26)&(7/29~8/2)&(8/5~8/9)&(8/12~8/16)&(8/19~8/23)&(8/26~8/30)&(9/2~9/6)
+        else{
+			document.write("8:00~17:00");}   
+}
+else if((dt_2.getMonth()==6&&dt_2.getDate()==6)||(dt_2.getMonth()==6&&dt_2.getDate()==13)||(dt_2.getMonth()==6&&dt_2.getDate()==20)||(dt_2.getMonth()==6&&dt_2.getDate()==27)||(dt_2.getMonth()==7&&dt_2.getDate()==3)||(dt_2.getMonth()==7&&dt_2.getDate()==10)||(dt_2.getMonth()==7&&dt_2.getDate()==17)||(dt_2.getMonth()==7&&dt_2.getDate()==24)||(dt_2.getMonth()==7&&dt_2.getDate()==31)){
+        if(dt_2.getHours()<9||(dt_2.getHours()==16&&dt_2.getMinutes()>=30)||dt_2.getHours()>16)
+    		document.write(".....停止借閱.....");                                             //暑假調整開館(周六)(7/6)&(7/13)&(7/20)&(7/27)&(8/3)&(8/10)&(8/17)&(8/24)&(8/31)
+    	else{    
+			document.write("9:00~16:30");}
+}
+else if((dt_2.getMonth()==5&&dt_2.getDate()==30)||(dt_2.getMonth()==6&&dt_2.getDate()==7)||(dt_2.getMonth()==6&&dt_2.getDate()==14)||(dt_2.getMonth()==6&&dt_2.getDate()==21)||(dt_2.getMonth()==6&&dt_2.getDate()==28)||(dt_2.getMonth()==7&&dt_2.getDate()==4)||(dt_2.getMonth()==7&&dt_2.getDate()==11)||(dt_2.getMonth()==7&&dt_2.getDate()==18)||(dt_2.getMonth()==7&&dt_2.getDate()==25)||(dt_2.getMonth()==8&&dt_2.getDate()==1)){
+        document.write(".....停止借閱.....");                                                       //暑假調整閉館(周日)(6/30)&(7/7)&(7/14)&(7/21)&(7/28)&(8/4)&(8/11)&(8/18)&(8/25)&(9/1)                                               
+}
+else if((dt_2.getMonth()==0&&dt_2.getDate()==23)||(dt_2.getMonth()==0&&dt_2.getDate()==24)||(dt_2.getMonth()==0&&dt_2.getDate()==25)||(dt_2.getMonth()==0&&dt_2.getDate()==26)||(dt_2.getMonth()==0&&dt_2.getDate()==27)||(dt_2.getMonth()==0&&dt_2.getDate()==28)||(dt_2.getMonth()==0&&dt_2.getDate()==29)){  
+        document.write(".....停止借閱.....");                                                       //春節連假閉館(1/23~1/29)
+}
+else if((dt_2.getMonth()==1&&dt_2.getDate()==16)||(dt_2.getMonth()==8&&dt_2.getDate()==8)){      //(2/16)&(9/8)調整開館(僅府城)
+        if(dt_2.getHours()<14||(dt_2.getHours()==21&&dt_2.getMinutes()>=30)||dt_2.getHours()>21)
+    		document.write(".....停止借閱.....");     
+    	else{    
+			document.write("14:00~21:30");}
+}
+else{
+switch(dt_2.getDay())                                                                            //府城校區借書時間
+{ 
+    case 1:            //星期一
+    	if(dt_2.getHours()<8||(dt_2.getHours()==21&&dt_2.getMinutes()>=30)||dt_2.getHours()>21)
+    		document.write(".....停止借閱.....");
+    	else{    
+			document.write("8:00~21:30");}
+			break;
+	case 2:            //星期二
+   		if(dt_2.getHours()<8||(dt_2.getHours()==21&&dt_2.getMinutes()>=30)||dt_2.getHours()>21)
+    		document.write(".....停止借閱.....");
+   	    else{    
+			document.write("8:00~21:30");}
+			break;
+	case 3:            //星期三
+    	if(dt_2.getHours()<8||(dt_2.getHours()==21&&dt_2.getMinutes()>=30)||dt_2.getHours()>21)
+    		document.write(".....停止借閱.....");
+   	 	else{    
+			document.write("8:00~21:30");}
+			break;
+	case 4:            //星期四
+   	    if(dt_2.getHours()<8||(dt_2.getHours()==21&&dt_2.getMinutes()>=30)||dt_2.getHours()>21)
+    		document.write(".....停止借閱.....");
+    	else{    
+			document.write("8:00~21:30");}
+		break;
+	case 5:            //星期五
+  	    if(dt_2.getHours()<8||(dt_2.getHours()==21&&dt_2.getMinutes()>=30)||dt_2.getHours()>21)
+    		document.write(".....停止借閱.....");
+        else{    
+			document.write("8:00~21:30");}
+			break;
+        case 6:        //星期六
+        if(dt_2.getHours()<9||(dt_2.getHours()==16&&dt_2.getMinutes()>=30)||dt_2.getHours()>16)
+    		document.write(".....停止借閱.....");
+        else{
+			document.write("9:00~16:30");}
+			break;
+	case 0:            //星期日
+   		if(dt_2.getHours()<14||(dt_2.getHours()==21&&dt_2.getMinutes()>=30)||dt_2.getHours()>21)
+    		document.write(".....停止借閱.....");
+        else{
+			document.write("14:00~21:30");}
+			break;
+}
+}
+</script></div>
+</div>
+<div class="chengfu col-sm-6">
+<div class="view_title">榮譽分館</div>
+<div class="view_message"><span>閱覽時間</span> <script>                                                //dt_3(榮譽校區開放時間)
+var dt_3 = new Date();
+if((dt_3.getMonth()==0&&dt_3.getDate()==1)||(dt_3.getMonth()==1&&dt_3.getDate()==28)||(dt_3.getMonth()==2&&dt_3.getDate()==1)||(dt_3.getMonth()==3&&dt_3.getDate()==2)||(dt_3.getMonth()==3&&dt_3.getDate()==3)||(dt_3.getMonth()==3&&dt_3.getDate()==4)||(dt_3.getMonth()==3&&dt_3.getDate()==5)||(dt_3.getMonth()==3&&dt_3.getDate()==6)||(dt_3.getMonth()==3&&dt_3.getDate()==7)||(dt_3.getMonth()==5&&dt_3.getDate()==7)||(dt_3.getMonth()==5&&dt_3.getDate()==22)||(dt_3.getMonth()==5&&dt_3.getDate()==23)||(dt_3.getMonth()==5&&dt_3.getDate()==29)||(dt_3.getMonth()==7&&dt_3.getDate()==28)||(dt_3.getMonth()==7&&dt_3.getDate()==29)||(dt_3.getMonth()==7&&dt_3.getDate()==30)||(dt_3.getMonth()==8&&dt_3.getDate()==7)||(dt_3.getMonth()==8&&dt_3.getDate()==13)||(dt_3.getMonth()==9&&dt_3.getDate()==10)||(dt_3.getMonth()==9&&dt_3.getDate()==11))
+{document.write(".....閉館中.....");}                                                             //特殊閉館時間判定(只要需要特殊閉館就修改這行)(1/1,2/28,3/1,4/2~4/7,6/7,6/22,6/23,6/29,8/28,8/29,8/30,9/7,9/13,10/10,10/11)
+else if((dt_3.getMonth()==9&&dt_3.getDate()==5)||(dt_3.getMonth()==11&&dt_3.getDate()==14)||(dt_3.getMonth()==11&&dt_3.getDate()==15)){            //調整上班課(調整開館)(10/5,12/14,12/15)
+	if(dt_3.getHours()<8||(dt_3.getHours()==17&&dt_3.getMinutes()>=30)||dt_3.getHours()>17)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~17:30");}
+}
+else if((dt_1.getMonth()==0&&dt_1.getDate()==13)||(dt_1.getMonth()==0&&dt_1.getDate()==14)||(dt_1.getMonth()==0&&dt_1.getDate()==15)||(dt_1.getMonth()==0&&dt_1.getDate()==16)||(dt_1.getMonth()==0&&dt_1.getDate()==17)||(dt_1.getMonth()==0&&dt_1.getDate()==20)||(dt_1.getMonth()==0&&dt_1.getDate()==21)||(dt_1.getMonth()==0&&dt_1.getDate()==22)||(dt_1.getMonth()==0&&dt_1.getDate()==30)||(dt_1.getMonth()==0&&dt_1.getDate()==31)||(dt_1.getMonth()==1&&dt_1.getDate()==3)||(dt_1.getMonth()==1&&dt_1.getDate()==4)||(dt_1.getMonth()==1&&dt_1.getDate()==5)||(dt_1.getMonth()==1&&dt_1.getDate()==6)||(dt_1.getMonth()==1&&dt_1.getDate()==7)||(dt_1.getMonth()==1&&dt_1.getDate()==10)||(dt_1.getMonth()==1&&dt_1.getDate()==11)||(dt_1.getMonth()==1&&dt_1.getDate()==12)||(dt_1.getMonth()==1&&dt_1.getDate()==13)||(dt_1.getMonth()==1&&dt_1.getDate()==14)||(dt_1.getMonth()==1&&dt_1.getDate()==17)||(dt_1.getMonth()==1&&dt_1.getDate()==18)||(dt_1.getMonth()==1&&dt_1.getDate()==19)||(dt_1.getMonth()==1&&dt_1.getDate()==20)||(dt_1.getMonth()==1&&dt_1.getDate()==21)||(dt_1.getMonth()==1&&dt_1.getDate()==24)||(dt_1.getMonth()==1&&dt_1.getDate()==25)||(dt_1.getMonth()==1&&dt_1.getDate()==26)||(dt_1.getMonth()==1&&dt_1.getDate()==27)){     //寒假調整開館(只開周一到周五)(1/13~1/17,1/20~1/22,1/30,1/31,2/3~2/7,2/10~2/11,2/17~21,2/24~27)
+       if(dt_3.getHours()<8||(dt_3.getHours()==17&&dt_3.getMinutes()>=30)||dt_3.getHours()>17)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~17:30");}
+}
+else if((dt_1.getMonth()==0&&dt_1.getDate()==11)||(dt_1.getMonth()==0&&dt_1.getDate()==12)||(dt_1.getMonth()==0&&dt_1.getDate()==18)||(dt_1.getMonth()==0&&dt_1.getDate()==19)||(dt_1.getMonth()==1&&dt_1.getDate()==1)||(dt_1.getMonth()==1&&dt_1.getDate()==2)||(dt_1.getMonth()==1&&dt_1.getDate()==8)||(dt_1.getMonth()==1&&dt_1.getDate()==9)||(dt_1.getMonth()==1&&dt_1.getDate()==15)||(dt_1.getMonth()==1&&dt_1.getDate()==16)||(dt_1.getMonth()==1&&dt_1.getDate()==22)||(dt_1.getMonth()==1&&dt_1.getDate()==23)||(dt_1.getMonth()==1&&dt_1.getDate()==28)||(dt_1.getMonth()==1&&dt_1.getDate()==29)){
+document.write(".....閉館中.....");
+}                                                                                                //寒假調整閉館(週六日1/11,1/12,1/18,1/19,2/1,2/2,2/8,2/9)
+else if((dt_3.getMonth()==5&&dt_3.getDate()==24)||(dt_3.getMonth()==5&&dt_3.getDate()==25)||(dt_3.getMonth()==5&&dt_3.getDate()==26)||(dt_3.getMonth()==5&&dt_3.getDate()==27)||(dt_3.getMonth()==5&&dt_3.getDate()==28)||(dt_3.getMonth()==6&&dt_3.getDate()==1)||(dt_3.getMonth()==6&&dt_3.getDate()==2)||(dt_3.getMonth()==6&&dt_3.getDate()==3)||(dt_3.getMonth()==6&&dt_3.getDate()==4)||(dt_3.getMonth()==6&&dt_3.getDate()==5)||(dt_3.getMonth()==6&&dt_3.getDate()==8)||(dt_3.getMonth()==6&&dt_3.getDate()==9)||(dt_3.getMonth()==6&&dt_3.getDate()==10)||(dt_3.getMonth()==6&&dt_3.getDate()==11)||(dt_3.getMonth()==6&&dt_3.getDate()==12)||(dt_3.getMonth()==6&&dt_3.getDate()==15)||(dt_3.getMonth()==6&&dt_3.getDate()==16)||(dt_3.getMonth()==6&&dt_3.getDate()==17)||(dt_3.getMonth()==6&&dt_3.getDate()==18)||(dt_3.getMonth()==6&&dt_3.getDate()==19)||(dt_3.getMonth()==6&&dt_3.getDate()==22)||(dt_3.getMonth()==6&&dt_3.getDate()==23)||(dt_3.getMonth()==6&&dt_3.getDate()==24)||(dt_3.getMonth()==6&&dt_3.getDate()==25)||(dt_3.getMonth()==6&&dt_3.getDate()==26)||(dt_3.getMonth()==6&&dt_3.getDate()==29)||(dt_3.getMonth()==6&&dt_3.getDate()==30)||(dt_3.getMonth()==6&&dt_3.getDate()==31)||(dt_3.getMonth()==7&&dt_3.getDate()==1)||(dt_3.getMonth()==7&&dt_3.getDate()==2)||(dt_3.getMonth()==7&&dt_3.getDate()==5)||(dt_3.getMonth()==7&&dt_3.getDate()==6)||(dt_3.getMonth()==7&&dt_3.getDate()==7)||(dt_3.getMonth()==7&&dt_3.getDate()==8)||(dt_3.getMonth()==7&&dt_3.getDate()==9)||(dt_3.getMonth()==7&&dt_3.getDate()==12)||(dt_3.getMonth()==7&&dt_3.getDate()==13)||(dt_3.getMonth()==7&&dt_3.getDate()==14)||(dt_3.getMonth()==7&&dt_3.getDate()==15)||(dt_3.getMonth()==7&&dt_3.getDate()==16)||(dt_3.getMonth()==7&&dt_3.getDate()==19)||(dt_3.getMonth()==7&&dt_3.getDate()==20)||(dt_3.getMonth()==7&&dt_3.getDate()==21)||(dt_3.getMonth()==7&&dt_3.getDate()==22)||(dt_3.getMonth()==7&&dt_3.getDate()==23)||(dt_3.getMonth()==7&&dt_3.getDate()==26)||(dt_3.getMonth()==7&&dt_3.getDate()==27)||(dt_3.getMonth()==7&&dt_3.getDate()==28)||(dt_3.getMonth()==7&&dt_3.getDate()==29)||(dt_3.getMonth()==7&&dt_3.getDate()==30)||(dt_3.getMonth()==8&&dt_3.getDate()==2)||(dt_3.getMonth()==8&&dt_3.getDate()==3)||(dt_3.getMonth()==8&&dt_3.getDate()==4)||(dt_3.getMonth()==8&&dt_3.getDate()==5)||(dt_3.getMonth()==8&&dt_3.getDate()==6)){
+       if(dt_3.getHours()<8||(dt_3.getHours()==17&&dt_3.getMinutes()>=30)||dt_3.getHours()>17)
+    		document.write(".....閉館中.....");                                                     //暑假調整開館(周一到周五)(6/24~6/28)&(7/1~7/5)&(7/8~7/12)&(7/15~19)&(7/22~7/26)&(7/29~8/2)&(8/5~8/9)&(8/12~8/16)&(8/19~8/23)&(8/26~8/30)&(9/2~9/6)
+    	else{    
+			document.write("8:00~17:30");}
+}
+else if((dt_3.getMonth()==5&&dt_3.getDate()==29)||(dt_3.getMonth()==5&&dt_3.getDate()==30)||(dt_3.getMonth()==6&&dt_3.getDate()==6)||(dt_3.getMonth()==6&&dt_3.getDate()==7)||(dt_3.getMonth()==6&&dt_3.getDate()==13)||(dt_3.getMonth()==6&&dt_3.getDate()==14)||(dt_3.getMonth()==6&&dt_3.getDate()==20)||(dt_3.getMonth()==6&&dt_3.getDate()==21)||(dt_3.getMonth()==6&&dt_3.getDate()==27)||(dt_3.getMonth()==6&&dt_3.getDate()==28)||(dt_3.getMonth()==7&&dt_3.getDate()==3)||(dt_3.getMonth()==7&&dt_3.getDate()==4)||(dt_3.getMonth()==7&&dt_3.getDate()==10)||(dt_3.getMonth()==7&&dt_3.getDate()==11)||(dt_3.getMonth()==7&&dt_3.getDate()==17)||(dt_3.getMonth()==7&&dt_3.getDate()==18)||(dt_3.getMonth()==7&&dt_3.getDate()==24)||(dt_3.getMonth()==7&&dt_3.getDate()==25)||(dt_3.getMonth()==7&&dt_3.getDate()==31)||(dt_3.getMonth()==8&&dt_3.getDate()==1)||(dt_3.getMonth()==8&&dt_3.getDate()==7)||(dt_3.getMonth()==8&&dt_3.getDate()==8)){
+       document.write(".....閉館中.....");                                                             //暑假調整開館(周六日)(6/29、6/30、7/6、7/7、7/13、7/14、7/20、7/21、7/27、7/28、8/3、8/4、8/10、8/11、8/17、8/18、8/24、8/25、8/31、9/1、9/7、9/8)
+}
+else if((dt_3.getMonth()==0&&dt_3.getDate()==23)||(dt_3.getMonth()==0&&dt_3.getDate()==24)||(dt_3.getMonth()==0&&dt_3.getDate()==25)||(dt_3.getMonth()==0&&dt_3.getDate()==26)||(dt_3.getMonth()==0&&dt_3.getDate()==27)||(dt_3.getMonth()==0&&dt_3.getDate()==28)||(dt_3.getMonth()==0&&dt_3.getDate()==29)){  
+        document.write(".....閉館中.....");                                                       //春節連假閉館(1/23~1/29)
+}
+else{
+switch(dt_3.getDay())                                                                                 //榮譽校區開放時間
+{
+    case 1:            //星期一
+    	if(dt_3.getHours()<8||dt_3.getHours()>=22)
+    		document.write(".....閉館中.....");
+   	    else{    
+			document.write("8:00~22:00");}
+			break;
+	case 2:            //星期二
+    	if(dt_3.getHours()<8||dt_3.getHours()>=22)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~22:00");}
+			break;
+	case 3:            //星期三
+    	if(dt_3.getHours()<8||dt_3.getHours()>=22)
+    		document.write(".....閉館中.....");
+   	    else{    
+			document.write("8:00~22:00");}
+			break;
+	case 4:            //星期四
+    	if(dt_3.getHours()<8||dt_3.getHours()>=22)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~22:00");}
+			break;
+	case 5:            //星期五
+    	if(dt_3.getHours()<8||dt_3.getHours()>=22)
+    		document.write(".....閉館中.....");
+    	else{    
+			document.write("8:00~22:00");}
+			break;
+        case 6:            //星期六
+        if(dt_3.getHours()<9||dt_3.getHours()>=17)
+    		document.write(".....閉館中.....");
+        else{
+			document.write("9:00~17:00");}
+			break;
+	case 0:            //星期日
+    	if(dt_3.getHours()<9||dt_3.getHours()>=17)
+    		document.write(".....閉館中.....");
+        else{
+			document.write("9:00~17:00");}
+			break;
+}
+}
+</script><span>借書時間</span> <script>                                                            //dt_4(榮譽校區借書時間)
+var dt_4 = new Date();
+if((dt_4.getMonth()==0&&dt_4.getDate()==1)||(dt_4.getMonth()==1&&dt_4.getDate()==28)||(dt_4.getMonth()==2&&dt_4.getDate()==1)||(dt_4.getMonth()==3&&dt_4.getDate()==2)||(dt_4.getMonth()==3&&dt_4.getDate()==3)||(dt_4.getMonth()==3&&dt_4.getDate()==4)||(dt_4.getMonth()==3&&dt_4.getDate()==5)||(dt_4.getMonth()==3&&dt_4.getDate()==6)||(dt_4.getMonth()==3&&dt_4.getDate()==7)||(dt_4.getMonth()==5&&dt_4.getDate()==7)||(dt_4.getMonth()==5&&dt_4.getDate()==22)||(dt_4.getMonth()==5&&dt_4.getDate()==23)||(dt_4.getMonth()==5&&dt_4.getDate()==29)||(dt_4.getMonth()==7&&dt_4.getDate()==28)||(dt_4.getMonth()==7&&dt_4.getDate()==29)||(dt_4.getMonth()==7&&dt_4.getDate()==30)||(dt_4.getMonth()==8&&dt_4.getDate()==7)||(dt_4.getMonth()==8&&dt_4.getDate()==13)||(dt_4.getMonth()==9&&dt_4.getDate()==10)||(dt_4.getMonth()==9&&dt_4.getDate()==11))
+{document.write(".....閉館中.....");}                                                             //特殊閉館時間判定(只要需要特殊閉館就修改這行)(1/1,2/28,3/1,4/2~4/7,6/7,6/22,6/23,6/29,8/28,8/29,8/30,9/7,9/13,10/10,10/11)
+else if((dt_4.getMonth()==9&&dt_4.getDate()==5)||(dt_4.getMonth()==11&&dt_4.getDate()==14)||(dt_4.getMonth()==11&&dt_4.getDate()==15)){      //調整上班課(調整開館)(10/5,12/14,12/15)
+	if(dt_4.getHours()<8||dt_4.getHours()>=17){
+    		document.write(".....停止借閱.....");}
+        else{
+			document.write("8:00~17:00");}   
+}
+else if((dt_1.getMonth()==0&&dt_1.getDate()==13)||(dt_1.getMonth()==0&&dt_1.getDate()==14)||(dt_1.getMonth()==0&&dt_1.getDate()==15)||(dt_1.getMonth()==0&&dt_1.getDate()==16)||(dt_1.getMonth()==0&&dt_1.getDate()==17)||(dt_1.getMonth()==0&&dt_1.getDate()==20)||(dt_1.getMonth()==0&&dt_1.getDate()==21)||(dt_1.getMonth()==0&&dt_1.getDate()==22)||(dt_1.getMonth()==0&&dt_1.getDate()==30)||(dt_1.getMonth()==0&&dt_1.getDate()==31)||(dt_1.getMonth()==1&&dt_1.getDate()==3)||(dt_1.getMonth()==1&&dt_1.getDate()==4)||(dt_1.getMonth()==1&&dt_1.getDate()==5)||(dt_1.getMonth()==1&&dt_1.getDate()==6)||(dt_1.getMonth()==1&&dt_1.getDate()==7)||(dt_1.getMonth()==1&&dt_1.getDate()==10)||(dt_1.getMonth()==1&&dt_1.getDate()==11)||(dt_1.getMonth()==1&&dt_1.getDate()==12)||(dt_1.getMonth()==1&&dt_1.getDate()==13)||(dt_1.getMonth()==1&&dt_1.getDate()==14)||(dt_1.getMonth()==1&&dt_1.getDate()==17)||(dt_1.getMonth()==1&&dt_1.getDate()==18)||(dt_1.getMonth()==1&&dt_1.getDate()==19)||(dt_1.getMonth()==1&&dt_1.getDate()==20)||(dt_1.getMonth()==1&&dt_1.getDate()==21)||(dt_1.getMonth()==1&&dt_1.getDate()==24)||(dt_1.getMonth()==1&&dt_1.getDate()==25)||(dt_1.getMonth()==1&&dt_1.getDate()==26)||(dt_1.getMonth()==1&&dt_1.getDate()==27)){     //寒假調整開館(只開周一到周五)(1/13~1/17,1/20~1/22,1/30,1/31,2/3~2/7,2/10~2/11,2/17~21,2/24~27)     //寒假調整開館(只開周一到周五)(1/13~1/17,1/20~1/22,1/30,1/31,2/3~2/7,2/10~2/15)
+        if(dt_4.getHours()<8||dt_4.getHours()>=17)
+    		document.write(".....停止借閱.....");
+        else{
+			document.write("8:00~17:00");}   
+}
+else if((dt_1.getMonth()==0&&dt_1.getDate()==11)||(dt_1.getMonth()==0&&dt_1.getDate()==12)||(dt_1.getMonth()==0&&dt_1.getDate()==18)||(dt_1.getMonth()==0&&dt_1.getDate()==19)||(dt_1.getMonth()==1&&dt_1.getDate()==1)||(dt_1.getMonth()==1&&dt_1.getDate()==2)||(dt_1.getMonth()==1&&dt_1.getDate()==8)||(dt_1.getMonth()==1&&dt_1.getDate()==9)||(dt_1.getMonth()==1&&dt_1.getDate()==15)||(dt_1.getMonth()==1&&dt_1.getDate()==16)||(dt_1.getMonth()==1&&dt_1.getDate()==22)||(dt_1.getMonth()==1&&dt_1.getDate()==23)||(dt_1.getMonth()==1&&dt_1.getDate()==28)||(dt_1.getMonth()==1&&dt_1.getDate()==29)){
+document.write(".....閉館中.....");
+}                                                                                                //寒假調整閉館(週六日1/11,1/12,1/18,1/19,2/1,2/2,2/8,2/9)
+else if((dt_4.getMonth()==5&&dt_4.getDate()==24)||(dt_4.getMonth()==5&&dt_4.getDate()==25)||(dt_4.getMonth()==5&&dt_4.getDate()==26)||(dt_4.getMonth()==5&&dt_4.getDate()==27)||(dt_4.getMonth()==5&&dt_4.getDate()==28)||(dt_4.getMonth()==6&&dt_4.getDate()==1)||(dt_4.getMonth()==6&&dt_4.getDate()==2)||(dt_4.getMonth()==6&&dt_4.getDate()==3)||(dt_4.getMonth()==6&&dt_4.getDate()==4)||(dt_4.getMonth()==6&&dt_4.getDate()==5)||(dt_4.getMonth()==6&&dt_4.getDate()==8)||(dt_4.getMonth()==6&&dt_4.getDate()==9)||(dt_4.getMonth()==6&&dt_4.getDate()==10)||(dt_4.getMonth()==6&&dt_4.getDate()==11)||(dt_4.getMonth()==6&&dt_4.getDate()==12)||(dt_4.getMonth()==6&&dt_4.getDate()==15)||(dt_4.getMonth()==6&&dt_4.getDate()==16)||(dt_4.getMonth()==6&&dt_4.getDate()==17)||(dt_4.getMonth()==6&&dt_4.getDate()==18)||(dt_4.getMonth()==6&&dt_4.getDate()==19)||(dt_4.getMonth()==6&&dt_4.getDate()==22)||(dt_4.getMonth()==6&&dt_4.getDate()==23)||(dt_4.getMonth()==6&&dt_4.getDate()==24)||(dt_4.getMonth()==6&&dt_4.getDate()==25)||(dt_4.getMonth()==6&&dt_4.getDate()==26)||(dt_4.getMonth()==6&&dt_4.getDate()==29)||(dt_4.getMonth()==6&&dt_4.getDate()==30)||(dt_4.getMonth()==6&&dt_4.getDate()==31)||(dt_4.getMonth()==7&&dt_4.getDate()==1)||(dt_4.getMonth()==7&&dt_4.getDate()==2)||(dt_4.getMonth()==7&&dt_4.getDate()==5)||(dt_4.getMonth()==7&&dt_4.getDate()==6)||(dt_4.getMonth()==7&&dt_4.getDate()==7)||(dt_4.getMonth()==7&&dt_4.getDate()==8)||(dt_4.getMonth()==7&&dt_4.getDate()==9)||(dt_4.getMonth()==7&&dt_4.getDate()==12)||(dt_4.getMonth()==7&&dt_4.getDate()==13)||(dt_4.getMonth()==7&&dt_4.getDate()==14)||(dt_4.getMonth()==7&&dt_4.getDate()==15)||(dt_4.getMonth()==7&&dt_4.getDate()==16)||(dt_4.getMonth()==7&&dt_4.getDate()==19)||(dt_4.getMonth()==7&&dt_4.getDate()==20)||(dt_4.getMonth()==7&&dt_4.getDate()==21)||(dt_4.getMonth()==7&&dt_4.getDate()==22)||(dt_4.getMonth()==7&&dt_4.getDate()==23)||(dt_4.getMonth()==7&&dt_4.getDate()==26)||(dt_4.getMonth()==7&&dt_4.getDate()==27)||(dt_4.getMonth()==7&&dt_4.getDate()==28)||(dt_4.getMonth()==7&&dt_4.getDate()==29)||(dt_4.getMonth()==7&&dt_4.getDate()==30)||(dt_4.getMonth()==8&&dt_4.getDate()==2)||(dt_4.getMonth()==8&&dt_4.getDate()==3)||(dt_4.getMonth()==8&&dt_4.getDate()==4)||(dt_4.getMonth()==8&&dt_4.getDate()==5)||(dt_4.getMonth()==8&&dt_4.getDate()==6)){
+        if(dt_4.getHours()<8||dt_4.getHours()>=17){
+    		document.write(".....停止借閱.....");}                                             //暑假調整開館(周一到周五)(6/24~6/28)&(7/1~7/5)&(7/8~7/12)&(7/15~19)&(7/22~7/26)&(7/29~8/2)&(8/5~8/9)&(8/12~8/16)&(8/19~8/23)&(8/26~8/30)&(9/2~9/6)
+        else{
+			document.write("8:00~17:00");}   
+}
+else if((dt_4.getMonth()==5&&dt_4.getDate()==29)||(dt_4.getMonth()==5&&dt_4.getDate()==30)||(dt_4.getMonth()==6&&dt_4.getDate()==6)||(dt_4.getMonth()==6&&dt_4.getDate()==7)||(dt_4.getMonth()==6&&dt_4.getDate()==13)||(dt_4.getMonth()==6&&dt_4.getDate()==14)||(dt_4.getMonth()==6&&dt_4.getDate()==20)||(dt_4.getMonth()==6&&dt_4.getDate()==21)||(dt_4.getMonth()==6&&dt_4.getDate()==27)||(dt_4.getMonth()==6&&dt_4.getDate()==28)||(dt_4.getMonth()==7&&dt_4.getDate()==3)||(dt_4.getMonth()==7&&dt_4.getDate()==4)||(dt_4.getMonth()==7&&dt_4.getDate()==10)||(dt_4.getMonth()==7&&dt_4.getDate()==11)||(dt_4.getMonth()==7&&dt_4.getDate()==17)||(dt_4.getMonth()==7&&dt_4.getDate()==18)||(dt_4.getMonth()==7&&dt_4.getDate()==24)||(dt_4.getMonth()==7&&dt_4.getDate()==25)||(dt_4.getMonth()==7&&dt_4.getDate()==31)||(dt_4.getMonth()==8&&dt_4.getDate()==1)||(dt_4.getMonth()==8&&dt_4.getDate()==7)||(dt_4.getMonth()==8&&dt_4.getDate()==8)){
+        document.write(".....停止借閱.....");                                                      //暑假調整開館(周六日)(6/29、6/30、7/6、7/7、7/13、7/14、7/20、7/21、7/27、7/28、8/3、8/4、8/10、8/11、8/17、8/18、8/24、8/25、8/31、9/1、9/7、9/8)
+}
+else if((dt_4.getMonth()==0&&dt_4.getDate()==23)||(dt_4.getMonth()==0&&dt_4.getDate()==24)||(dt_4.getMonth()==0&&dt_4.getDate()==25)||(dt_4.getMonth()==0&&dt_4.getDate()==26)||(dt_4.getMonth()==0&&dt_4.getDate()==27)||(dt_4.getMonth()==0&&dt_4.getDate()==28)||(dt_4.getMonth()==0&&dt_4.getDate()==29)){  
+        document.write(".....閉館中.....");                                                       //春節連假閉館(1/23~1/29)
+}
+else{
+switch(dt_4.getDay())                                                                             //榮譽校區借書時間
+{
+    case 1:                //星期一
+    	if(dt_4.getHours()<8||(dt_4.getHours()==21&&dt_4.getMinutes()>=30)||dt_4.getHours()>21)
+    		document.write(".....停止借閱.....");
+    	else{    
+			document.write("8:00~21:30");}
+			break;
+	case 2:            //星期二
+    	if(dt_4.getHours()<8||(dt_4.getHours()==21&&dt_4.getMinutes()>=30)||dt_4.getHours()>21)
+    		document.write(".....停止借閱.....");
+    	else{    
+			document.write("8:00~21:30");}
+			break;
+	case 3:            //星期三
+    	if(dt_4.getHours()<8||(dt_4.getHours()==21&&dt_4.getMinutes()>=30)||dt_4.getHours()>21)
+    		document.write(".....停止借閱.....");
+    	else{    
+			document.write("8:00~21:30");}
+			break;
+	case 4:            //星期四
+    	if(dt_4.getHours()<8||(dt_4.getHours()==21&&dt_4.getMinutes()>=30)||dt_4.getHours()>21)
+    		document.write(".....停止借閱.....");
+    	else{    
+			document.write("8:00~21:30");}
+			break;
+	case 5:            //星期五
+    	if(dt_4.getHours()<8||(dt_4.getHours()==21&&dt_4.getMinutes()>=30)||dt_4.getHours()>21)
+    		document.write(".....停止借閱.....");
+    	else{    
+			document.write("8:00~21:30");}
+			break;
+        case 6:            //星期六
+        if(dt_4.getHours()<9||(dt_4.getHours()==16&&dt_4.getMinutes()>=30)||dt_4.getHours()>16)
+    		document.write(".....停止借閱.....");
+        else{    
+			document.write("9:00~16:30");}
+			break;
+	case 0:            //星期日
+    	if(dt_4.getHours()<9||(dt_4.getHours()==16&&dt_4.getMinutes()>=30)||dt_4.getHours()>16)
+    		document.write(".....停止借閱.....");
+        else{   
+			document.write("9:00~16:30");}
+			break;
+}
+}
+</script>&nbsp; &nbsp; &nbsp; &nbsp;<span id="cke_bm_3439S" style="display: none;">&nbsp;</span><span id="cke_bm_3438S" style="display: none;">&nbsp;</span><span id="cke_bm_3437S" style="display: none;">&nbsp;</span><span id="cke_bm_3436S" style="display: none;">&nbsp;</span><span id="cke_bm_3435S" style="display: none;">&nbsp;</span><span id="cke_bm_3434S" style="display: none;">&nbsp;</span><span id="cke_bm_3433S" style="display: none;">&nbsp;</span><span id="cke_bm_3432S" style="display: none;">&nbsp;</span><span id="cke_bm_3431S" style="display: none;">&nbsp;</span><span id="cke_bm_3430S" style="display: none;">&nbsp;</span><span id="cke_bm_3429S" style="display: none;">&nbsp;</span><span id="cke_bm_3428S" style="display: none;">&nbsp;</span><span id="cke_bm_3427S" style="display: none;">&nbsp;</span><span id="cke_bm_3426S" style="display: none;">&nbsp;</span><span id="cke_bm_3425S" style="display: none;">&nbsp;</span><span id="cke_bm_3424S" style="display: none;">&nbsp;</span><span id="cke_bm_3451S" style="display: none;">&nbsp;</span><span id="cke_bm_3450S" style="display: none;">&nbsp;</span><span id="cke_bm_3449S" style="display: none;">&nbsp;</span><span id="cke_bm_3448S" style="display: none;">&nbsp;</span><span id="cke_bm_3447S" style="display: none;">&nbsp;</span><span id="cke_bm_3446S" style="display: none;">&nbsp;</span><span id="cke_bm_3445S" style="display: none;">&nbsp;</span><span id="cke_bm_3444S" style="display: none;">&nbsp;</span><span id="cke_bm_3443S" style="display: none;">&nbsp;</span><span id="cke_bm_3442S" style="display: none;">&nbsp;</span><span id="cke_bm_3441S" style="display: none;">&nbsp;</span><span id="cke_bm_3440S" style="display: none;">&nbsp;</span><span id="cke_bm_3817S" style="display: none;">&nbsp;</span><span id="cke_bm_3816S" style="display: none;">&nbsp;</span><span id="cke_bm_3815S" style="display: none;">&nbsp;</span><span id="cke_bm_3814S" style="display: none;">&nbsp;</span><span id="cke_bm_3813S" style="display: none;">&nbsp;</span><span id="cke_bm_3812S" style="display: none;">&nbsp;</span><span id="cke_bm_3811S" style="display: none;">&nbsp;</span><span id="cke_bm_3810S" style="display: none;">&nbsp;</span><span id="cke_bm_3809S" style="display: none;">&nbsp;</span><span id="cke_bm_3808S" style="display: none;">&nbsp;</span><a href="/var/file/1/1001/img/2/2020-03-02_091451.jpg" title="更多開館時間"><img alt="更多開館時間" src="/var/file/1/1001/img/1/545544760.jpg" style="width: 98px; height: 25px;" /></a></div>
+</div>
+<div class="clearfix">&nbsp;</div>
